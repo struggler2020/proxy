@@ -11,10 +11,9 @@ RUN mkdir -p /etc/sockd
 RUN echo "logoutput: stderr" > /etc/sockd/sockd.conf && \
     echo "internal: 0.0.0.0 port=1080" >> /etc/sockd/sockd.conf && \
     echo "external: eth0" >> /etc/sockd/sockd.conf && \
-    echo "method: username" >> /etc/sockd/sockd.conf && \
+    echo "socksmethod: username" >> /etc/sockd/sockd.conf && \
     echo "user.privileged: root" >> /etc/sockd/sockd.conf && \
     echo "user.unprivileged: nobody" >> /etc/sockd/sockd.conf && \
-    echo "user.libwrap: libwrap" >> /etc/sockd/sockd.conf && \
     echo "client pass {" >> /etc/sockd/sockd.conf && \
     echo "    from: 0.0.0.0/0 to: 0.0.0.0/0" >> /etc/sockd/sockd.conf && \
     echo "    log: error connect disconnect" >> /etc/sockd/sockd.conf && \

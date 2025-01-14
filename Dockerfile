@@ -25,7 +25,7 @@ RUN echo "logoutput: stderr" > /etc/sockd/sockd.conf && \
     echo "}" >> /etc/sockd/sockd.conf
 
 # 创建用户认证文件
-RUN echo "username:password" > /etc/sockd/passwd
+RUN echo "username111:bcb09023f98" > /etc/sockd/passwd
 
 # 暴露 SOCKS5 代理端口
 EXPOSE 1080
